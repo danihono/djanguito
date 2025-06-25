@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>📊 Análise de Mercado</title>
+</head>
+<body style="font-family: Arial; background-color: #eef3f7; padding: 40px;">
+    <h1>📊 Análise de Mercado</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label>Categoria:</label><br>
+        <input type="text" name="categoria" required><br><br>
+
+        <label>Empresa:</label><br>
+        <input type="text" name="setor"><br><br>
+
+        <label>Região:</label><br>
+        <input type="text" name="regiao"><br><br>
+
+        <button type="submit">🚀 Executar Análise</button>
+    </form>
+
+    {% if relatorio_pronto %}
+        <hr>
+        <p>✅ Relatório gerado com sucesso!</p>
+        <a href="{% url 'baixar_relatorio' nome_arquivo %}" download>
+            📄 Baixar Relatório
+        </a>
+    {% endif %}
+
+    {% if erro %}
+        <hr>
+        <p style="color: red;">Erro: {{ erro }}</p>
+    {% endif %}
+
+    <br><br>
+    <a href="/">⬅️ Voltar para Home</a>
+</body>
+</html>

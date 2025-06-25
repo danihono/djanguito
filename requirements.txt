@@ -1,0 +1,17 @@
+Django
+crewai
+crewai-tools
+langchain
+langchain-openai
+openai
+streamlit
+python-dotenv
+pandas
+matplotlib
+beautifulsoup4
+requests
+python-docx
+pdfkit
+html2docx
+weasyprint
+gunicorn

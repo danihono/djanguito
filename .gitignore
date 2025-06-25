@@ -1,0 +1,14 @@
+# Ignora ambiente virtual
+venv/
+_pycache_/
+*.pyc
+*.pyo
+
+# Ignora banco de dados local
+*.sqlite3
+
+# Ignora variáveis sensíveis
+.env
+
+# Outros
+.DS_Store
